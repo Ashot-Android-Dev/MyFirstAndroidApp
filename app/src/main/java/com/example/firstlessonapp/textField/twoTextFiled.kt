@@ -80,6 +80,7 @@ fun TwoTextField(
                             .padding(16.dp),
                         verticalArrangement = Arrangement.SpaceAround
                     )
+
                     {
                         for (item in filtersItem) {
                             Row(
