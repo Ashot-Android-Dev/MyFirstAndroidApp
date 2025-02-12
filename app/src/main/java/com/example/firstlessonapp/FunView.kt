@@ -1,5 +1,4 @@
 package com.example.firstlessonapp
-
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -16,20 +15,13 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewmodel.compose.viewModel
-
-
-
 class CountViewModel : ViewModel() {
-
     private val _count = MutableLiveData(0)
     val count: LiveData<Int> = _count
-
     fun countInc() {
-
         _count.value = _count.value?.plus(10)
     }
 }
-
 @Composable
 fun CountAA( viewModel: CountViewModel = viewModel()) {
     val abc by viewModel.count.observeAsState()
