@@ -1,0 +1,40 @@
+<resources>
+    <string name="app_name">FirstLessonApp</string>
+    <string name="my_notebook">this is my notebook</string>
+    <string name="my_phone">this is my phone</string>
+    <string name="ready">i am ready</string>
+    <string name="main_title">MATHEMATICAL OPERATION\nPAGE </string>
+    <string name="text_data">i live in Armenia </string>
+    <string name="age_of_person">i am a 44 years old</string>
+    <string name="data_person">Data of VIP\nPerson</string>
+    <string name="data_of_workers1">Id__ </string>
+    <string name="data_of_workers2"> Name </string>
+    <string name="data_of_workers3"> Surname </string>
+    <string name="data_of_workers4">Prof</string>
+    <string name="id_number">12346</string>
+    <string name="id_number11">Id Name Surname Prof</string>
+    <string name="line_text">Line is a freeware app and service for instant messaging and social networking, operated by the Japanese company LY Corporation, co-owned by SoftBank Group. Line was launched in Japan in June 2011 by NHN Japan,
+Initially designed for text messaging and VoIP voice and video calling, it has gradually expanded to become a super-app providing services inc</string>
+    <string name="welcome">hello, %1$s.\nnice to meet you</string>
+    <string name="title">title</string>
+    <string name="content">content</string>
+    <string name="unused_button">button</string>
+    <string name="utilised_button"> click here </string>
+    <string name="character">. min six character </string>
+    <string name="uppercase">. min one uppercase </string>
+    <string name="digit">. min one digit </string>
+    <string name="password"> .Enter your Name and Code number!  </string>
+    <string name="homePage"> .Enter your Name and Surname Age  </string>
+    <string name="firstPage"> .Enter your Age and Email  </string>
+    <string name="finishPage">  Nice Shopping  </string>
+    <string name="purchases"> the purchase was a success\nCongratulations  </string>
+    <string name="title_text"> Let\'s get to know you better ! </string>
+    <string name="info_text"> We use this information\nto calculate and provide you personalized\nrecommendation  </string>
+    <string name="gender_info_text"> What\'s your gender ?</string>
+    <string name="birth_info_text"> Enter data of birth ?</string>
+    <string name="text_with_button_first"> Next</string>
+    <string name="text_with_button_second"> Skip</string>
+    <string name="height_text"> What\'s your height ?</string>
+    <string name="weight_text"> What\'s your weight ?</string>
+
+</resources>
