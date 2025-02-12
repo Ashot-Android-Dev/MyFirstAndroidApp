@@ -1,4 +1,5 @@
 package com.example.firstlessonapp
+
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -23,13 +24,14 @@ class CountViewModel : ViewModel() {
         _count.value = _count.value?.plus(10)
     }
 }
+
 @Composable
-fun CountAA( viewModel: CountViewModel = viewModel()) {
+fun CountAA(viewModel: CountViewModel = viewModel()) {
     val abc by viewModel.count.observeAsState()
     Column(modifier = Modifier.padding(50.dp)) {
         OutlinedTextField(value = abc.toString(),
             onValueChange = {})
-        Button(onClick = {  },Modifier.fillMaxWidth(0.90f)) {
+        Button(onClick = { }, Modifier.fillMaxWidth(0.90f)) {
             Text(text = "Inc", modifier = Modifier.clickable { viewModel.countInc() })
 
         }
