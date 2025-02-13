@@ -34,5 +34,6 @@ fun CountAA(viewModel: CountViewModel = viewModel()) {
             Text(text = "Inc", modifier = Modifier.clickable { viewModel.countInc() })
 
         }
+
     }
 }
