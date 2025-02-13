@@ -24,7 +24,6 @@ class CountViewModel : ViewModel() {
         _count.value = _count.value?.plus(10)
     }
 }
-
 @Composable
 fun CountAA(viewModel: CountViewModel = viewModel()) {
     val abc by viewModel.count.observeAsState()
