@@ -1,22 +1,12 @@
 package com.example.firstlessonapp
-
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.ui.res.stringResource
-import com.example.firstlessonapp.data.local.database.UserDb
-import com.example.firstlessonapp.data.local.model.UserInfo
-import com.example.firstlessonapp.passwordVerification.ApplicationPhoneFun
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.withContext
-
 class MainActivity : ComponentActivity() {
 //    private lateinit var carSaleDatabase: CarSaleDb
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            CountAA()
 //            val db= UserDb.getUserInfo(this)
 //            val userDao=db.userDbInfo()
 //            LaunchedEffect (Unit){
