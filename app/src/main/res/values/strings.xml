@@ -36,5 +36,7 @@ Initially designed for text messaging and VoIP voice and video calling, it has g
     <string name="text_with_button_second"> Skip</string>
     <string name="height_text"> What\'s your height ?</string>
     <string name="weight_text"> What\'s your weight ?</string>
+    <string name="text_label"> enter your name</string>
+    <string name="second_text_label"> enter your surname</string>
 
 </resources>

@@ -1,4 +1,4 @@
-package com.example.firstlessonapp.textField
+package com.example.firstlessonapp.view.phoneScreens
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -29,7 +29,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
-import com.example.firstlessonapp.passwordVerification.Personal
 import com.example.firstlessonapp.R
 import com.example.firstlessonapp.ui.theme.checkColor
 import com.example.firstlessonapp.ui.theme.white80
@@ -117,12 +116,12 @@ fun TwoTextField(
                                 Text(text = "CANSEL", modifier = Modifier
                                     .clickable {
                                         startDialog=false
-                                               },
+                                    },
                                     color = Color.Green)
                                 Text(text = "SAVE", modifier = Modifier
                                     .clickable {
                                         startDialog=false
-                                               },
+                                    },
                                     color = Color.Green)
                             }
                         }
@@ -153,5 +152,3 @@ fun TwoTextField(
         )
     }
 }
-
-

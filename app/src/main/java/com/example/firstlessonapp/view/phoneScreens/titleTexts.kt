@@ -1,4 +1,4 @@
-package com.example.firstlessonapp.textField
+package com.example.firstlessonapp.view.phoneScreens
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -35,4 +35,3 @@ fun TwoText(
         )
     }
 }
-
