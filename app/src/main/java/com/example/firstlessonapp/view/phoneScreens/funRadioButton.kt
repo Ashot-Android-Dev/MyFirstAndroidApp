@@ -1,4 +1,4 @@
-package com.example.firstlessonapp.radioButton
+package com.example.firstlessonapp.view.phoneScreens
 
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
@@ -63,4 +63,3 @@ fun FunRadioButton(modifier: Modifier = Modifier, genderInfo: String) {
         }
     }
 }
-

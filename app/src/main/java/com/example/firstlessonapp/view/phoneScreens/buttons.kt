@@ -1,4 +1,4 @@
-package com.example.firstlessonapp.button
+package com.example.firstlessonapp.view.phoneScreens
 
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -17,7 +17,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun TwoButtons(
+fun FunButton(
     modifier: Modifier = Modifier,
     buttonWithText: String,
     buttonFillColor: Color? = null,

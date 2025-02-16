@@ -1,4 +1,4 @@
-package com.example.firstlessonapp.passwordVerification
+package com.example.firstlessonapp.view
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -18,13 +18,16 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.example.firstlessonapp.button.TwoButtons
-import com.example.firstlessonapp.radioButton.FunRadioButton
-import com.example.firstlessonapp.textField.TwoText
-import com.example.firstlessonapp.textField.TwoTextField
+import com.example.firstlessonapp.R
 import com.example.firstlessonapp.ui.theme.buttonGreen
 import com.example.firstlessonapp.ui.theme.colorForColumn
+import com.example.firstlessonapp.view.phoneScreens.FunButton
+import com.example.firstlessonapp.view.phoneScreens.FunRadioButton
+import com.example.firstlessonapp.view.phoneScreens.Personal
+import com.example.firstlessonapp.view.phoneScreens.TwoText
+import com.example.firstlessonapp.view.phoneScreens.TwoTextField
 
 @Composable
 fun ApplicationPhoneFun(
@@ -93,12 +96,12 @@ fun ApplicationPhoneFun(
             horizontalAlignment = Alignment.CenterHorizontally,
         )
         {
-            TwoButtons(
+            FunButton(
                 buttonWithText = firstButtonWithText,
                 buttonFillColor = buttonFillColor,
                 buttonTextColor = buttonTextColor
             )
-            TwoButtons(
+            FunButton(
                 buttonWithText = secondButtonWithText,
                 buttonFillColor = buttonTextColor,
                 buttonTextColor = buttonFillColor
@@ -108,3 +111,17 @@ fun ApplicationPhoneFun(
 }
 
 
+@Composable
+fun MainScreenPhone(modifier: Modifier = Modifier) {
+    ApplicationPhoneFun(
+        titleWithText = stringResource(R.string.title_text),
+        infoWithText = stringResource(R.string.info_text),
+        genderWithText = stringResource(R.string.gender_info_text),
+        birthInfoWithText = stringResource(R.string.birth_info_text),
+        textForHeight = stringResource(R.string.height_text),
+        textForWeight = stringResource(R.string.weight_text),
+        firstButtonWithText = stringResource(R.string.text_with_button_first),
+        secondButtonWithText = stringResource(R.string.text_with_button_second),
+
+    )
+}

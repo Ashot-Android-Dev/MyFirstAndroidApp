@@ -1,11 +1,14 @@
+import com.android.build.gradle.internal.packaging.defaultExcludes
+import org.gradle.kotlin.dsl.support.kotlinCompilerOptions
+
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     id("com.google.devtools.ksp")
     id("androidx.room")
-
-
+    id("com.google.dagger.hilt.android")
+    id("kotlin-kapt")
 
 }
 
@@ -46,21 +49,10 @@ android {
     room {
         schemaDirectory("$projectDir/schemas")
     }
+
 }
-val roomVersion = "2.6.1"
 
 dependencies {
-    implementation(libs.androidx.room.runtime)
-    implementation(libs.androidx.room)
-    implementation(libs.firebase.firestore.ktx)
-    ksp(libs.androidx.room.compiler.v250)
-
-    implementation (libs.room.ktx.v251)
-    implementation (libs.androidx.runtime.livedata)
-
-    implementation (libs.androidx.lifecycle.livedata.ktx)
-    implementation (libs.androidx.lifecycle.viewmodel.ktx)
-
     implementation(libs.androidx.navigation.compose)
     implementation(libs.androidx.core.ktx)
     implementation(libs.androidx.lifecycle.runtime.ktx)
@@ -78,68 +70,27 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    implementation(libs.firebase.firestore.ktx)
+    implementation(libs.room.ktx.v251)
+    implementation(libs.androidx.runtime.livedata)
+    implementation(libs.androidx.lifecycle.livedata.ktx)
+    implementation(libs.androidx.lifecycle.viewmodel.ktx)
+    implementation(libs.androidx.hilt.navigation.compose)
+    implementation(libs.kotlinx.coroutines.android)
+    implementation(libs.kotlinx.coroutines.core)
     implementation(kotlin("reflect"))
+    val room_version = "2.6.1"
+    implementation("androidx.room:room-runtime:$room_version")
+    implementation ("androidx.room:room-rxjava3:$room_version")
+    implementation ("io.reactivex.rxjava3:rxjava:3.1.10")
+    ksp("androidx.room:room-compiler:$room_version")
+
+    implementation("com.google.dagger:hilt-android:2.51.1")
+    kapt("com.google.dagger:hilt-android-compiler:2.51.1")
+
+    implementation ("androidx.lifecycle:lifecycle-viewmodel-compose:2.5.0")
+}
+kapt {
+    correctErrorTypes = true
 }
 
-
-//plugins {
-//    id 'com.android.application'
-//    id 'org.jetbrains.kotlin.android'
-//    id 'kotlin-kapt' // Սրա առկայությունը պարտադիր է Room-ի համար
-//}
-//
-//android {
-//    compileSdk 34
-//
-//    defaultConfig {
-//        applicationId "com.example.yourapp"
-//        minSdk 21
-//        targetSdk 34
-//        versionCode 1
-//        versionName "1.0"
-//
-//        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-//    }
-//
-//    buildFeatures {
-//        compose true
-//    }
-//
-//    composeOptions {
-//        kotlinCompilerExtensionVersion "1.5.0"
-//    }
-//
-//    kotlinOptions {
-//        jvmTarget = "1.8"
-//    }
-//}
-//
-//dependencies {
-//    def room_version = "2.6.0"
-//
-//    // Room
-//    implementation "androidx.room:room-runtime:$room_version"
-//    kapt "androidx.room:room-compiler:$room_version"  // ✅ ԿԱՐԵՎՈՐ է
-//
-//    // Room with Kotlin Coroutines
-//    implementation "androidx.room:room-ktx:$room_version"  // ✅ Coroutine-ների աջակցություն
-//
-//    // Jetpack Compose
-//    implementation "androidx.compose.ui:ui:1.5.0"
-//    implementation "androidx.compose.material:material:1.5.0"
-//    implementation "androidx.compose.ui:ui-tooling-preview:1.5.0"
-//    debugImplementation "androidx.compose.ui:ui-tooling:1.5.0"
-//
-//    // Lifecycle
-//    implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.6.1"
-//    implementation "androidx.activity:activity-compose:1.7.2"
-//
-//    // Coroutine
-//    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:1.7.3"
-//    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.7.3"
-//
-//    // Testing (optional)
-//    testImplementation "junit:junit:4.13.2"
-//    androidTestImplementation "androidx.test.ext:junit:1.1.5"
-//    androidTestImplementation "androidx.test.espresso:espresso-core:3.5.1"
-//}
